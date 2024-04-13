@@ -1,0 +1,409 @@
+<!-- Determined the document type the browser will opem -> HTML -->
+<!DOCTYPE html>
+
+<!-- Used the HTML marker for the entire page, with the language -> English  -->
+<html lang="en">
+
+<!-- Courses page cutomisation -->
+<head>
+        <!-- The title of the page -->
+        <title>Better Career Courses Page</title>
+        <!-- The meta tags is used to access the app in any browser -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Allow the page to adjust size by device -->
+        <meta name="keywords" content="online,training,admin,course,career"> <!-- The keywords for search engines -->
+        <meta name="author" content="Florentina Diana Cracea"> <!-- Web app author -->
+      
+         <!-- Bootstrap library included to introduce templates easily and Icon Font Stylesheet -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        
+        <!-- An icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Imported the functions needed from the SDKs -->
+        <script defer type="module">
+          import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+          import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+        </script>
+
+        <!-- Linked the script.js javaScript file -->
+        <script defer src="js/script.js"> </script>
+        
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+            
+        <!-- Connect to the Template Stylesheet created for Better Career -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <!-- Define Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+</head>
+
+
+<header>
+        <!-- Navigation Bar cutomisation -->
+        <div class="main-container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                <!-- Adapted the container to the full size (12 columns) of the screen with "fluid" -->
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="index.html"><img src="https://drive.google.com/thumbnail?id=1IXan9xedkrfvfHQjM0bSVzNCcepIi8_o"></a>
+                  <!--Vavigation bar only collapse and does not hide -->
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" 
+                  aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+    
+                  <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                      
+                    <!-- The link and definition of the buttons in the header -->
+                    <!-- Using the function: <class="nav-link active" aria-current="page"> to underline the current page-->
+                        <li class="nav-item">
+                        <a class="nav-link" href="index.html"><b>Home</b></a> 
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="courses.html"><b>Courses</b></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="careers.html"><b>Careers</b></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="about.html"><b>About Us</b></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><b>Contact</b></a>
+                      </li>
+                    </ul>
+
+                    <div class="subnav">
+                      <img src="https://drive.google.com/thumbnail?id=1gb4YRY_cPKaT2wni040cwhO1ifm-aQW0" 
+                      class="subnavbtn">
+                      <div class="subnav-content">
+                          <!-- ---------    Link to open the modal login form    ---------- -->
+                          <a href="#linklog" onclick="document.getElementById('id01').style.display='inline-block'">Log in</a>
+                          <!-- ---------    Link to open the modal register form    ---------- -->
+                          <a href="#linkreg" onclick="document.getElementById('id02').style.display='inline-block'">Register</a>
+                          <a href="dashboard.html">My Dashboard</a>
+                    </div>
+                  </div>
+      
+                  <!-- Cart Button to open the cart page -->
+                  <a href="cart.html">
+                      <button style="font-size:16px"><i class="fa fa-cart-arrow-down"></i></button>
+                  </a>
+      
+              </nav>
+      
+          </div>
+      
+      
+      
+          <!-- The Modal (contains the Log In form) -->
+          <div id="id01" class="modallog">
+       
+              <!-- Modal Content -->
+              <!-- send the data from the form to the Realtime Database in Firebase -->
+              <form class="modallog-content animate" action="/https://bettercareer-27033-default-rtdb.firebaseio.com/" method="post">   
+                  <div class="imgcontainer">
+                      <h1>Login</h1>
+                      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                      <img src="https://drive.google.com/thumbnail?id=1CcB7ubF7vhffaXtPDhBkATErvlviThz7" alt="Avatar" class="avatar">
+                      <!-- Insert a new paragraph -->
+                      <p>Please fill in this form to login.</p>
+                  </div>
+      
+                  <div class="container">
+                  <label for="uname"><b>Username</b></label>
+                  <input type="text" placeholder="Enter Username" id="uname" required>
+      
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" id="psw" required>
+                  </div>
+              
+                  <!-- Modal backround style -->
+                  <div class="container" style="background-color:#f1f1f1ec;">
+                  <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                  </label>
+                  <br>
+                  <button type="submit" id="logMe">Login</button>  
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'" 
+                  class="cancelbtn">Cancel</button>
+                  <span class="psw"><a href="#" style="color: #329685;">Forgot password?</a></span>
+                  </div>
+              </form>
+              </div>
+      
+      
+             <!-- The Modal (contains the Registration form) -->
+              <div id="id02" class="modalreg">
+              <!-- Modal Content -->
+              <form class="modalreg-content animate" action="/https://bettercareer-27033-default-rtdb.firebaseio.com/" method="get">
+                      <div class="imgcontainer">
+                      <h1>Register</h1>
+                      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                      <img src="https://drive.google.com/thumbnail?id=1CcB7ubF7vhffaXtPDhBkATErvlviThz7" alt="Avatar" class="avatar">
+                      <p>Please fill in this form to create an account.</p>
+                      </div>
+                  
+                      <div class="container">
+                      <label for="username"><b>Usarname</b></label>
+                      <input type="text" name="username" placeholder= "Username" required /> 
+                      <label for="email"><b>Email</b></label>
+                      <input type="text" placeholder="Enter Email" name="email" required>
+                      
+                      <label for="psw"><b>Password</b></label>
+                      <input type="password" placeholder="Enter Password" name="psw" required>
+      
+                      <label for="psw-repeat"><b>Repeat Password</b></label>
+                      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+                      <label>Interested in:
+                      <select>
+                          <option value="Blank"> </option> 
+                          <option value="Career">Finding the best career for me.</option>  
+                          <option value="Evolve">Improve my knoladge.</option>  
+                          <option value="Skills">Gain new skills.</option>  
+                          <option value="Interview">How to prepare for an interview.</option>  
+                          </select>
+                      </label>
+      
+                      <label>   
+                          Age group:&emsp;  <!-- Used &emsp yo create a double space between values --> 
+                          <input type="radio" value="20s" name="Age"> 15-20 &ensp; <!-- Used &ensp to create one space --> 
+                          <input type="radio" value="40s" name="Age"> 20-40 &ensp;   
+                          <input type="radio" value="70" name="Age"> 40-60 &ensp;
+                      </label>
+                      </div>
+      
+                      <div class="container" style="background-color:#f1f1f1ec;">
+                      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                      <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+                          <br> <!-- Add a break & Move to the next row --> 
+                          <button type="submit" class="register">Register</button>
+                          <button type="button" onclick="document.getElementById('id02').style.display='none'" 
+                          class="cancelbtn">Cancel</button>
+                      </div>
+              </form>
+              </div>
+              <script>
+                  // Get the modal
+                  var modallog = document.getElementById('id01');
+                  
+                  // When the user clicks anywhere outside of the modal, close it
+                  window.onclick = function(event) {
+                      if (event.target == modallog) {
+                          modallog.style.display = "none";
+                      }
+                  }
+              </script>
+              <script>
+                  // Get the modal
+                  var modalreg = document.getElementById('id02');
+                  
+                  // When the user clicks anywhere outside of the modal, close it
+                  window.onclick = function(event) {
+                      if (event.target == modalreg) {
+                          modalreg.style.display = "none";
+                      }
+                  }
+              </script>
+      
+        <!-- Line insertion -->
+        <div class="row">
+              <hr>
+        </div>
+ </header>
+<!-- ---------   The End of Navigation Bar cutomisation and the Modal Forms   ---------- -->
+
+
+<!-- Courses page content cutomisation -->
+ <body>
+    <h1 class="heading">Courses</h1>
+
+    <!-- Page section 2 -->
+        
+    <section class="courses" style="padding: 100px;">
+
+        <div class="box-container">
+     
+            <div class="box" style="border-radius:20px; border-color: aqua; border-width: 2px; border-style: inset;">
+                <div class="pic">  
+                   <div class="info">
+                      <h3>Microsoft Excel Course</h3>
+                      <span>Beginner</span>
+                   </div>
+                </div>
+                <div class="thumb">
+                  <img src="https://drive.google.com/thumbnail?id=1W4IsFw20r6__x4ORizI9bs_jZ1iUO-7X" alt="" 
+                  style="border-color: aqua; border-width: 2px; border-style: inset;">
+                  <span>10 videos</span>
+                </div>
+                <a href="video.html">
+                  <button><h4><b>View Program</b></h4></button>
+                </a>
+             </div>
+     
+           <div class="box" style="border-radius:20px; border-color: aqua; border-width: 2px; border-style: inset;">
+            <div class="pic">  
+               <div class="info">
+                  <h3>Microsoft Word Course</h3>
+                  <span>Beginner</span>
+               </div>
+            </div>
+            <div class="thumb">
+              <img src="https://drive.google.com/thumbnail?id=1-EGMZ7hJxOD2sYT6swfjJoJhHsYan-Mu" alt="" 
+              style="border-color: aqua; border-width: 2px; border-style: inset;">
+              <span>10 videos</span>
+            </div>
+            <a href="video.html">
+              <button><h4><b>View Program</b></h4></button>
+            </a>
+         </div>
+     
+           <div class="box" style="border-radius:20px; border-color: aqua; border-width: 2px; border-style: inset;">
+            <div class="pic">  
+               <div class="info">
+                  <h3>Outlook Course</h3>
+                  <span>Beginner</span>
+               </div>
+            </div>
+            <div class="thumb">
+              <img src="https://drive.google.com/thumbnail?id=1McuvSQZ1VsE2knbaDO58E4R_9KQOHd-R" alt="" 
+              style="border-color: aqua; border-width: 2px; border-style: inset;">
+              <span>10 videos</span>
+            </div>
+            <a href="video.html">
+              <button><h4><b>View Program</b></h4></button>
+            </a>
+         </div>
+        </div>
+     </section>
+
+     
+     <h1 class="heading"><b>Careers</b></h1>
+
+
+
+     <section class="courses" style="padding: 100px;">
+
+        <div class="box-container">
+     
+            <div class="box" style="border-radius:20px; border-color: aqua; border-width: 2px; border-style: inset;">
+                <div class="pic">  
+                   <div class="info">
+                      <h3>Administrator Career</h3>
+                      <span>Beginner</span>
+                   </div>
+                </div>
+                <div class="thumb">
+                  <img src="https://drive.google.com/thumbnail?id=1Ad0cs7VKuYnUoWPYRKB7Kmun7HnsaRt9" alt="" 
+                  style="border-color: aqua; border-width: 2px; border-style: inset;">
+                  <span>4 Courses</span>
+                </div>
+                <a href="videoCareer.html">
+                  <button><h4><b>View Program</b></h4></button>
+                </a>
+             </div>
+     
+           <div class="box" style="border-radius:20px; border-color: aqua; border-width: 2px; border-style: inset;">
+            <div class="pic">  
+               <div class="info">
+                  <h3>Sales Career</h3>
+                  <span>Beginner</span>
+               </div>
+            </div>
+            <div class="thumb">
+              <img src="https://drive.google.com/thumbnail?id=1qQkQVap-3xCFtFh9wSwkhCsLsibAaNRI" alt="" 
+              style="border-color: aqua; border-width: 2px; border-style: inset;">
+              <span>5 Courses</span>
+            </div>
+            <a href="videoCareer.html">
+              <button><h4><b>View Program</b></h4></button>
+            </a>
+         </div>
+
+           <div class="box" style="border-radius:20px; border-color: aqua; border-width: 2px; border-style: inset;">
+            <div class="pic">  
+               <div class="info">
+                  <h3>Customer Service Career</h3>
+                  <span>Beginner</span>
+               </div>
+            </div>
+            <div class="thumb">
+              <img src="https://drive.google.com/thumbnail?id=1dx4cYKafJRNp7GfS1u70HX3JtlCaagHe" alt="" 
+              style="border-color: aqua; border-width: 2px; border-style: inset;">
+              <span>5 Courses</span>
+            </div>
+            <a href="videoCareer.html">
+              <button><h4><b>View Program</b></h4></button>
+            </a>
+         </div>
+        </div>
+     </section>
+
+
+
+   <!-- Footer wil the elements alligned in the centre -->
+  <footer class="footer align-items-centre">
+
+    <!-- Footer columns customisation -->
+    <div class="inner">
+        <div class="column is-nav">
+            <div class="column-title"><a href="courses.html" style="color: #fff;">Courses</a></div>
+        </div>
+        
+        <div class="column is-nav">
+            <div class="column-title"><a href="careers.html" style="color: #fff;">Careers</a></div>
+        </div>
+        <div class="column is-nav">
+            <div class="column-title"><a href="about.html" style="color: #fff;">Testimonials</a></div>
+        </div>
+
+        <!-- Company name & logo -->
+        <div class="column is-logo">
+            <a href="#" class="main-logo">
+                <div class="logo"><a href="index.html" style="color: #fff;">
+                    <img src="https://drive.google.com/thumbnail?id=1IXan9xedkrfvfHQjM0bSVzNCcepIi8_o" alt="bettercareer"></a>
+                </div>
+                <div class="logo-info">
+                    <div class="text"><a href="index.html" style="color: #fff;">Better Career</a></div>
+                </div>
+            </a>
+
+
+            <!-- Subscribe -->
+            <div class="col-12 col-md-12 box">
+                <div class="Subscribe d-flex no-gutters">
+                  <div class="col-12">
+                    <input type="text" placeholder="Enter e-mail"> <!-- Text within the textbox -->
+                  </div>
+                  <div class="col-4">
+                    <button>Subscribe</button>
+                  </div>
+                </div>
+              </div>
+
+
+
+            <div class="column-title"><a href="policy.html" style="color: #fff;">Privacy Policy | Terms & Conditions</a></div>
+            <span class="copyright">© 2024. All rights reserved.</span>
+        </div>
+
+
+        <div class="column is-nav">
+            <div class="column-title"><a href="contact.html" style="color: #fff;">Contact Us</a></div>
+        </div>
+        <div class="column is-nav">
+            <div class="column-title"><a href="index.html" style="color: #fff;">Statistics</a></div>
+        </div>
+        <div class="column is-nav">
+            <div class="column-title"><a href="about.html" style="color: #fff;">About Us</a></div>
+        </div>
+    </div>
+
+
+  </footer>
+ </body>
+</html>

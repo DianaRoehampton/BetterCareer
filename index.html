@@ -1,0 +1,423 @@
+<!-- Determined the document type the browser will opem -> HTML -->
+<!DOCTYPE html>
+<!-- Used the HTML marker for the entire page, with the language -> English  -->
+<html lang="en">
+
+<!-- Home page cutomisation -->
+    <head>
+        <!-- The title of the page -->
+        <title>Better Career Home Page</title>
+        <!-- The meta tags is used to access the app in any browser -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Allow the page to adjust size by device -->
+        <meta name="keywords" content="online,training,admin,course,career"> <!-- The keywords for search engines -->
+        <meta name="author" content="Florentina Diana Cracea"> <!-- Web app author -->
+      
+         <!-- Bootstrap library included to introduce templates easily and Icon Font Stylesheet -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <!-- An icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- Imported the functions needed from the SDKs -->
+        <script defer type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+        </script>
+
+        <!-- Linked the script.js javaScript file -->
+        <script defer src="js/script.js"> </script>
+        
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+            
+        <!-- Template Stylesheet created for Better Career -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <!-- Define Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    </head>
+
+<header>
+    <!-- Navigation Bar cutomisation -->
+    <div class="main-container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <!-- Adapted the container to the full size (12 columns) of the screen with "fluid" -->
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"><img src="https://drive.google.com/thumbnail?id=1IXan9xedkrfvfHQjM0bSVzNCcepIi8_o"></a>
+              <!--Navigation bar only collapses and does not hide -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" 
+              aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                  
+                <!-- The link and definition of the buttons in the header -->
+                <!-- Using the function: <class="nav-link active" aria-current="page"> to underline the current page-->
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html"><b>Home</b></a> 
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="courses.html"><b>Courses</b></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="careers.html"><b>Careers</b></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html"><b>About Us</b></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html"><b>Contact</b></a>
+                  </li>
+                </ul>
+            </div>
+
+            <div class="subnav">
+                <img src="https://drive.google.com/thumbnail?id=1gb4YRY_cPKaT2wni040cwhO1ifm-aQW0" 
+                class="subnavbtn">
+                <div class="subnav-content">
+                    <!-- ---------    Link to open the modal login form    ---------- -->
+                    <a href="#linklog" onclick="document.getElementById('id01').style.display='inline-block'">Log in</a>
+                    <!-- ---------    Link to open the modal register form    ---------- -->
+                    <a href="#linkreg" onclick="document.getElementById('id02').style.display='inline-block'">Register</a>
+                    <a href="dashboard.html">My Dashboard</a>
+              </div>
+            </div>
+
+            <!-- Cart Button to open the cart page -->
+            <a href="cart.html">
+                <button style="font-size:16px"><i class="fa fa-cart-arrow-down"></i></button>
+            </a>
+
+        </nav>
+
+    </div>
+
+
+
+    <!-- The Modal (contains the Log In form) -->
+    <div id="id01" class="modallog">
+ 
+        <!-- Modal Content -->
+        <!-- send the data from the form to the Realtime Database in Firebase -->
+        <form class="modallog-content animate" action="/https://bettercareer-27033-default-rtdb.firebaseio.com/" method="post">   
+            <div class="imgcontainer">
+                <h1>Login</h1>
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="https://drive.google.com/thumbnail?id=1CcB7ubF7vhffaXtPDhBkATErvlviThz7" alt="Avatar" class="avatar">
+                <!-- Insert a new paragraph -->
+                <p>Please fill in this form to login.</p>
+            </div>
+
+            <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" id="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" id="psw" required>
+            </div>
+        
+            <!-- Modal backround style -->
+            <div class="container" style="background-color:#f1f1f1ec;">
+            <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+            <br>
+            <button type="submit" id="logMe">Login</button>  
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" 
+            class="cancelbtn">Cancel</button>
+            <span class="psw"><a href="#" style="color: #329685;">Forgot password?</a></span>
+            </div>
+        </form>
+        </div>
+
+
+       <!-- The Modal (contains the Registration form) -->
+        <div id="id02" class="modalreg">
+        <!-- Modal Content -->
+        <form class="modalreg-content animate" action="/https://bettercareer-27033-default-rtdb.firebaseio.com/" method="get">
+                <div class="imgcontainer">
+                <h1>Register</h1>
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="https://drive.google.com/thumbnail?id=1CcB7ubF7vhffaXtPDhBkATErvlviThz7" alt="Avatar" class="avatar">
+                <p>Please fill in this form to create an account.</p>
+                </div>
+            
+                <div class="container">
+                <label for="username"><b>Usarname</b></label>
+                <input type="text" name="username" placeholder= "Username" required /> 
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+                
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                <label>Interested in:
+                <select>
+                    <option value="Blank"> </option> 
+                    <option value="Career">Finding the best career for me.</option>  
+                    <option value="Evolve">Improve my knoladge.</option>  
+                    <option value="Skills">Gain new skills.</option>  
+                    <option value="Interview">How to prepare for an interview.</option>  
+                    </select>
+                </label>
+
+                <label>   
+                    Age group:&emsp;  <!-- Used &emsp yo create a double space between values --> 
+                    <input type="radio" value="20s" name="Age"> 15-20 &ensp; <!-- Used &ensp to create one space --> 
+                    <input type="radio" value="40s" name="Age"> 20-40 &ensp;   
+                    <input type="radio" value="70" name="Age"> 40-60 &ensp;
+                </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1ec;">
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+                    <br> <!-- Add a break & Move to the next row --> 
+                    <button type="submit" class="register">Register</button>
+                    <button type="button" onclick="document.getElementById('id02').style.display='none'" 
+                    class="cancelbtn">Cancel</button>
+                </div>
+        </form>
+        </div>
+        <script>
+            // Get the modal
+            var modallog = document.getElementById('id01');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modallog) {
+                    modallog.style.display = "none";
+                }
+            }
+        </script>
+        <script>
+            // Get the modal
+            var modalreg = document.getElementById('id02');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modalreg) {
+                    modalreg.style.display = "none";
+                }
+            }
+        </script>
+
+        <!-- Line insertion -->
+        <div class="row">
+            <hr>
+        </div>
+</header>
+
+<!-- Home page content cutomisation -->
+<body>
+    
+    <!-- Create a section to devide web page content -->
+    <div class="section" style="padding: 50px;">
+        <!-- Home page intro -->
+        <h1><b>&ensp;Change your future today with a Better Career!</b></h1>
+    
+    
+    <!-- Home page section 1 -->
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-2 offset-2 align-items-centre">
+            <!-- ---------    Button to open evaluation form    ---------- -->
+                <button onclick="document.getElementById('form').style.display='inline-block'">Evaluate your future today
+                <iframe width="640px" height="480px" 
+                    src="https://forms.office.com/Pages/ResponsePage.aspx?id=Y1DmXzdc-0e0zOQmWeYH7S7GdTFbwOJPgclDOY2YbAlUQ1BOVjFMQzVPOUdQME9HTDVBTjdMSTRYQi4u&analysis&embed=true" 
+                    frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:auto; max-height:100vh" 
+                    allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> 
+                </iframe>
+            </button>
+            </div>
+
+
+
+            <div class="col-sm-12 col-md-6 col-lg-2 offset-3">
+            <!-- Embeding Youtube Video on mute that autoplays forever with: "&autoplay=1&mute=1&loop=1&controls=0"-->
+            <button onclick="document.getElementById('form').style.display='inline-block'">
+                <iframe width="700" height="505" src="https://www.youtube.com/embed/goNOzX5vg48?si=VUv1-yTM0Cmwf-ih&loop=1&mute=1&controls=0&autoplay=1" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" style="padding: 50px  align-items-centre;">
+        <!-- Home page section 2 -->
+        <div class="row" style="padding-left: 127px; padding-right: 75px;">
+            <h2><b>We Offer:</b></h2>
+            <h3>A chance to anyone that want's to change their life.
+                All you have to do is to register and start a course today.
+                <br> <!-- Move to the next row --> 
+                Better Career courses are made for everyone's understanding to help build conffidence and experinece.
+            </h3>
+
+            <div class="fiveC">
+                <h1>Taylor-Made</h1>
+                    <br> 
+                    <h2>Online Courses</h2>
+                <h1>Live</h1>
+                    <br> 
+                    <h2>Support</h2>
+                <h1>High</h1>
+                    <br> 
+                    <h2>Completion Rate</h2>
+                <h1>Career</h1>
+                    <br> 
+                    <h2>Advice & Evaluation</h2>
+                <h1>Progression</h1>
+                    <br> 
+                    <h2>Tracking</h2>                
+            </div>
+        </div>
+    </div>
+        <!-- Home page section 3 -->
+        <div class="row" style="background-color:aliceblue">
+            <div class="col-sm-12 col-md-6 col-lg-3 offset-2" style="padding: 20px;">
+                <div class="box" style="background-color: white; padding: 10px; width: 500px; border-radius:20px; border-color: aqua; border-width: 2px; border-style: inset;">
+                    <div class="container" style="background-color: rgba(184, 247, 239, 0.821);">
+                        <h3><b>Taylor-Made</b></h3>
+                        <h3><b>Online Courses</b></h3>
+                    </div>
+                    <br> 
+                    <div class="container">
+                        <h4>Take it step by step with the courses fit for your chosen career.  
+                        You will even be rewarded with a certificate of completion once you complete a course 
+                        and the knoladge gained was tested.
+                        </h4>
+                        <br>
+                        <h4 >
+                            <a href="courses.html">
+                                <button style="height: 50px; font-size: x-large;"><b>Start your Career</b></button>
+                            </a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-3 offset-2" style="padding: 20px;">
+                <div class="box" style="background-color: white; padding: 10px; width: 500px; border-radius:20px; border-color: aqua; border-width: 2px; border-style: inset;">
+                    <div class="container" style="background-color: rgba(184, 247, 239, 0.821);">
+                        <h3><b>Career Advice &</b></h3>
+                        <h3><b>Evaluation</b></h3>
+                    </div>
+                    <br> 
+                    <div class="container">
+                        <h4>Sometimes is hard to know what to choose as a career. To resque you, 
+                        we offer career advice and evaluation. This will help you chase the career of your dreams. 
+                        </h4>
+                        <br>
+                        <h4 >
+                            <a href="courses.html">
+                                <button style="height: 50px; font-size: x-large;"><b>Start your Career</b></button>
+                            </a>
+                        </h4> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="padding: 50px;">
+        <!-- Home page section 4 -->
+            <h2><b>Testimonials</b></h2>
+            <div class="col-lg-3 offset-0">
+                
+                <div class="col-sm-12 col-md-6 col-lg-3 offset-2" style="padding-left: 250px; padding-bottom: 20px;">
+                    <div class="box" 
+                    style="background-color: white; text-align: center;  width: 1700px; border-radius:20px; border-color: aqua; border-width: 2px; border-style: inset;">
+                    
+                    <a href="about.html" style="color: #fff;">
+                    <img src="https://drive.google.com/thumbnail?id=1kttdHaVXL6hpIdqHv8ulohpYwz2rb6d8"  
+                     style="width:35%"></a>
+                     <h4>Better Career courses contain valuable information related to the latest computer applications.
+                        This offers anyone the possibility to gain up to date experince to progress. 
+                        The testimonials show that out target is reached and students are evolving in the right direction.
+                        </h4>
+                    <div class="containerLarge">
+                        <br> 
+                        <h4 >
+                            <a href="about.html">
+                                <button style="height: 50px; font-size: x-large;"><b>See all Testimonials</b></button>
+                            </a>
+                        </h4> 
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+
+
+
+   <!-- Footer wil the elements alligned in the centre -->
+   <footer class="footer align-items-centre">
+
+    <!-- Footer columns customisation -->
+    <div class="inner">
+        <div class="column is-nav">
+            <div class="column-title"><a href="courses.html" style="color: #fff;">Courses</a></div>
+        </div>
+        
+        <div class="column is-nav">
+            <div class="column-title"><a href="careers.html" style="color: #fff;">Careers</a></div>
+        </div>
+        <div class="column is-nav">
+            <div class="column-title"><a href="about.html" style="color: #fff;">Testimonials</a></div>
+        </div>
+
+        <!-- Company name & logo -->
+        <div class="column is-logo">
+            <a href="#" class="main-logo">
+                <div class="logo"><a href="index.html" style="color: #fff;">
+                    <img src="https://drive.google.com/thumbnail?id=1IXan9xedkrfvfHQjM0bSVzNCcepIi8_o" alt="bettercareer"></a>
+                </div>
+                <div class="logo-info">
+                    <div class="text"><a href="index.html" style="color: #fff;">Better Career</a></div>
+                </div>
+            </a>
+
+
+            <!-- Subscribe -->
+            <div class="col-12 col-md-12 box">
+                <div class="Subscribe d-flex no-gutters">
+                  <div class="col-12">
+                    <input type="text" placeholder="Enter e-mail"> <!-- Text within the textbox -->
+                  </div>
+                  <div class="col-4">
+                    <button>Subscribe</button>
+                  </div>
+                </div>
+              </div>
+
+
+
+            <div class="column-title"><a href="policy.html" style="color: #fff;">Privacy Policy | Terms & Conditions</a></div>
+            <span class="copyright">© 2024. All rights reserved.</span>
+        </div>
+
+
+        <div class="column is-nav">
+            <div class="column-title"><a href="contact.html" style="color: #fff;">Contact Us</a></div>
+        </div>
+        <div class="column is-nav">
+            <div class="column-title"><a href="index.html" style="color: #fff;">Statistics</a></div>
+        </div>
+        <div class="column is-nav">
+            <div class="column-title"><a href="about.html" style="color: #fff;">About Us</a></div>
+        </div>
+    </div>
+
+
+
+</footer>
+</html>

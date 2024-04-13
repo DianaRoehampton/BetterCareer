@@ -1,0 +1,897 @@
+/********** Template CSS **********/
+
+/* Font setting */
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* All buttons style setting */
+button {
+background-color: #04aaaad2;
+color: white;
+padding: 10px 18px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: fit-content;
+margin: 4px 2px;
+border-radius: 12px;
+font-size: 16px;
+}
+button:hover {
+opacity: 0.8;
+color:#c9e917d2
+}
+
+/* Image centre allignment */
+.imgcontainer {
+text-align: center;
+margin: 24px 0 12px 0;
+position: relative;
+}
+
+img.avatar {
+width: 40%;
+border-radius: 50%;
+}
+
+.container {
+padding: 16px;
+}
+
+
+/*  Columns specifications */
+.column {
+float: left;
+width: 50%;
+max-width: fit-content;
+padding: 10px;
+margin:auto;
+margin-top: 20px;
+}
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Fields input - allow full-width  */
+input[type=text], input[type=password]
+{
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+box-sizing: border-box;
+}
+
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+/* Title heading allignment */
+h1 {
+    text-align: center;
+    font-size: 55px;
+    /* Here you can change angle of gardient also as 45deg here */
+    background: linear-gradient(45deg,#00FF00,#038f70,#14dbd1d3,#48ff00,#FFFF00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size:100%;
+  }
+
+/* Heading 2 allignment */
+h3 {
+    text-align: center;
+  }
+
+h2 {
+    text-align: center;
+  }
+
+/* Fit 5 columns */  
+  .fiveC {
+    column-width: 400px;
+    text-align: center;
+  }
+
+
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+/* The Login Modal Background */
+.modallog {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(184, 247, 239, 0.821); /* Black w/ opacity */
+padding-top: 60px;
+}
+
+/* Modal Box */
+.modallog-content {
+background-color: #fefefe;
+margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+border: 1px solid #329685;
+width: 30%; /* Varries based on the screen size */
+}
+
+
+/* The Registration Modal Background */
+.modalreg {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(184, 247, 239, 0.821); /* Black w/ opacity */
+    padding-top: 60px;
+    }
+
+    /* Modal Box */
+    .modalreg-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #329685;
+    width: 30%; /* Varries based on the screen size */
+    }
+
+    /* Add a background color when the inputs get focus */
+    input[type=text]:focus, input[type=password]:focus {
+    background-color: rgba(184, 247, 239, 0.821);
+    outline: none;
+    }
+
+ /* The Close Button (x) within the Modal on the right corner */
+ .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+    }
+
+/* Change the Close Button (x) to red once hovered over */
+.close:hover,
+.close:focus {
+color: red;
+cursor: pointer;
+}
+
+/* Cancel button additional styles */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    }    
+
+/*  Styles change for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+    }
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+/*  *//*  *//*  *//*  *//* Courses & Cart *//*  *//*  *//*  *//*  *//*  */
+
+/* Customise the size of the Cart */
+@media (min-width: 1025px) {
+  .h-custom {
+  height: 120vh !important;
+  }
+  }
+  
+  /* Radom attribute is specified on an input element -> user cannot edit the input */
+  .cards-shopping .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem; /* = 16px */
+  line-height: 2.15; 
+  padding-left: .75em; /* em = font-size of its parent element */
+  padding-right: .75em;
+  }
+  
+  .bg-summary {
+  background-color: rgba(184, 247, 239, 0.821);
+  box-shadow: #329685;
+  }
+  
+  @media (min-width: 1000px) {
+  .cards-shopping-2 .bg-summary {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  }
+  }
+  
+  @media (max-width: 991px) {
+  .cards-shopping-2 .bg-summary {
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  }
+  }
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+/*  *//*  *//*  *//*  *//* About Us *//*  *//*  *//*  *//*  *//*  */
+
+
+.columnAbout {
+  width: 32%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+}
+
+.containerAbout {
+  padding: 0 16px;
+}
+
+.containerAbout::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 850px) {
+  .columnAbout {
+    width: 70%;
+    display: block;
+  }
+}
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+
+
+/*  *//*  *//*  *//*  *//* Courses *//*  *//*  *//*  *//*  *//*  */
+
+/* Box characteristics */
+.box:hover {
+  box-shadow: 2px 8px 16px 2px rgba(2,2,2,2.2);
+}
+/* Overall box Characteristics */
+.courses .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap:1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Inside the box Characteristics */
+.courses .box-container .box{
+  border-radius: .5rem;
+  background-color: var(--white);
+  padding: 2rem;
+  
+}
+/* The top of the box characteristics */
+.courses .box-container .box .pic{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+/* Video number characteristics */
+.courses .box-container .box .thumb{
+  position: relative;
+}
+.courses .box-container .box .thumb span{
+  position: absolute;
+  top:1rem; left: 1rem;
+  border-radius: .5rem;
+  padding: .5rem 1.5rem;
+  background-color: rgba(0,0,0,.3);
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* Image characteristics */
+.courses .box-container .box .thumb img{
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: .5rem;
+}
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+
+/*  *//*  *//*  *//*  *//* Courses Video Sidebar *//*  *//*  *//*  *//*  *//*  */
+
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  justify-content: center;
+}
+
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: rgba(210, 245, 240, 0.719);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #329685;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: rgba(102, 192, 180, 0.821);
+  color: white;
+}
+
+/* Page content. The value of sthe margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+/*  *//*  *//*  *//*  *//* Video play *//*  *//*  *//*  *//*  *//*  */
+
+
+/* The Video Contaoner Characteristics */
+
+bodyvideo {
+  /* to display the progress number in the middle */
+  display: flex; align-items: center; justify-content: center; 
+  flex-wrap: wrap;
+}
+.watch-video .video-container{
+  background-color: var(--white);
+  border-radius: .5rem;
+  padding: 2rem;
+  border-color: aqua; 
+  border-width: 2px; 
+  border-style: inset;
+  width: 70%;
+  text-align-last:center;
+}
+
+.watch-video .video-container .video{
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+/* The Video Characteristics */
+.watch-video .video-container .video video{
+  object-fit: contain;
+}
+
+/* The Title of the Video Characteristics */
+.watch-video .video-container .title{
+  font-size: 2rem;
+  color: var(--black);
+}
+
+/* Progress bar*/
+div.progress { 
+  font-size: 35px; 
+  width: 70%;
+  height: 50px;
+  padding: 5px;
+  background-color: rgba(102, 192, 180, 0.342);
+  position: relative;
+} 
+
+
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+
+/*  *//*  *//*  *//*  *//* User Profile *//*  *//*  *//*  *//*  */
+
+.user-profile .info{
+  background-color: var(--white);
+  border-radius: .5rem;
+  padding: 2rem;
+}
+
+.user-profile .info .user{
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.user-profile .info .user img{
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.user-profile .info .user h3{
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.user-profile .info .user p{
+  font-size: 1.7rem;
+  color: var(--dark-color);
+  padding: .3rem 0;
+}
+
+.user-profile .info .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.user-profile .info .box-container .box{
+  background-color: var(--light-bg);
+  border-radius: .5rem;
+  padding: 2rem;
+  flex: 1 1 25rem;
+}
+
+.user-profile .info .box-container .box .flex{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.user-profile .info .box-container .box .flex i{
+  font-size:2rem;
+  color: var(--white);
+  background-color: var(--black);
+  text-align: center;
+  border-radius: .5rem;
+  height: 5rem;
+  width: 5rem;
+  line-height: 4.9rem;
+}
+
+.user-profile .info .box-container .box .flex span{
+  font-size: 2.5rem;
+  color: var(--main-color);
+}
+
+.user-profile .info .box-container .box .flex p{
+  color: var(--light-color);
+  font-size: 1.7rem;
+}
+
+
+.heading{
+  font-size: 2.5rem;
+  color:var(--black);
+  margin-bottom: 2.5rem;
+  border-bottom: var(--border);
+  padding-bottom: 1.5rem;
+  text-transform: capitalize;
+}
+
+
+.flex-btn{
+  display: flex;
+  gap: 1rem;
+}
+
+
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn,
+.btn,
+.delete-btn,
+.option-btn{
+   border-radius: .5rem;
+   color:#ee8787;
+   font-size: 1.8rem;
+   cursor: pointer;
+   text-transform: capitalize;
+   padding:1rem 3rem;
+   text-align: center;
+   margin-top: 1rem;
+}
+
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn{
+   display: inline-block;
+}
+
+.btn,
+.inline-btn{
+   background-color: var(--main-color);
+}
+
+
+
+.inline-btn:hover,
+.inline-option-btn:hover,
+.inline-delete-btn:hover,
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover{
+   background-color: var(--black);
+   color: var(--white);
+}
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+
+/*  *//*  *//*  *//*  *//* Badges *//*  *//*  *//*  *//*  *//*  */
+
+/* --------------------------
+  Base
+--------------------------- */
+
+
+svg {
+  margin: auto;
+  display: block;
+}
+
+/* --------------------------
+  Keyframes - Animation
+--------------------------- */
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+}
+@keyframes turn {
+  0% {
+    transform: rotate(0) scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: rotate(375deg) scale(1.1);
+  }
+  80% {
+    transform: rotate(355deg) scale(0.9);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+@keyframes pulse {
+  50% {
+    transform: scale(1.4);
+  }
+}
+
+/* --------------------------
+  SVG Styles - Animation
+--------------------------- */
+
+
+.badge * {
+  transform-origin: 50% 50%;
+}
+
+.outer, 
+.inner,
+.inline {
+  animation: grow 1s ease-out backwards;
+}
+
+.inner {
+  animation-delay: 0.1s;
+}
+
+.inline {
+  animation-delay: 0.15s;
+}
+
+.star {
+  animation: turn 1.1s .2s ease-out backwards;
+}
+
+.star circle {
+  animation: pulse .7s 1.5s;
+}
+
+  .star circle:nth-of-type(2) {
+    animation-delay: 1.6s;
+  }
+  .star circle:nth-of-type(3) {
+    animation-delay: 1.7s;
+  }
+  .star circle:nth-of-type(4) {
+    animation-delay: 1.8s;
+  }
+  .star circle:nth-of-type(5) {
+    animation-delay: 1.9s;
+  }
+
+
+
+  
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+
+/*  *//*  *//*  *//*  *//* Checkbox *//*  *//*  *//*  *//*  *//*  */
+
+/* Hide the browser's default checkbox */
+.containerCheck input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.containerCheck:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.containerCheck input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containerCheck input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerCheck .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* The container */
+.containerCheck {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+
+
+/*  *//*  *//*  *//*  *//* User Dropdown *//*  *//*  *//*  *//*  *//*  */
+
+/* The navigation menu */
+.navbar {
+  overflow: hidden;
+  margin-top: 0px;
+  height: 70px;
+}
+/* Navigation links */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* The subnavigation menu */
+.subnav {
+  size: 10px;
+  float: left;
+  overflow: hidden;
+}
+
+/* User Icon Setting */
+.subnav .subnavbtn {
+  width:66px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 2px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+/* Add a background color to navigation links on hover */
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: rgba(102, 192, 180, 0.342);
+}
+
+/* Style the subnav menu content - positioned absolute */
+.subnav-content {
+  display: none;
+  position: absolute;
+  float: left; /* Show up pn the nav bar, on the left */
+  background-color: rgba(102, 192, 180, 0.342);
+  width: fit-content;
+  height: 66px; 
+  align-content: center;
+  z-index: 1;
+}
+/* Style the subnav links */
+.subnav-content a {
+  float: left;
+  color: blue;
+  text-decoration: none;
+}
+/* Add a background color on hover */
+.subnav-content a:hover {
+  background-color: #48d1baf3;
+  margin: 5px;
+  border-radius: 20%;
+}
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+  display: block;
+  position:relative;
+}
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+
+/*  Footer */
+.footer {
+display:flow-root;
+left: 0;
+bottom: 0;
+width: 100%;
+position: relative;
+background: #07a78c;
+padding: 80px 25px 50px 25px;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+text-align: center;
+}
+.footer-start {
+display: flex;
+position: relative;
+align-items: center;
+justify-content: space-between;
+max-width: 1280px;
+width: 90%;
+margin: auto;
+padding: 80px 100px;
+background: #705df2;
+border-radius: 15px;
+}
+.start-learning {
+position: absolute;
+left: 0;
+right: 0;
+top: -150px;
+}
+
+/* Footer inner allignment */
+.footer .inner {
+display: flex;
+align-items: self-start;
+justify-content: space-between;
+column-gap: 75px;
+row-gap: 20px;
+max-width: 1180px;
+margin: auto;
+text-align: left;
+}
+
+/* Logo position */
+.main-logo {
+position: relative;
+display: flex;
+align-items: center;
+}
+.main-logo .logo > img {
+display: block;
+width: 100%;
+min-width: 40px;
+}
+.text {
+font-size: 17px;
+line-height: 17px;
+color: #fff;
+letter-spacing: .18em;
+font-weight: 600;
+}
+.copyright {
+color: #fff;
+font-size: 12px;
+line-height: 12px;
+}
+
+.footer .column .column-title {
+font-weight: 300;
+font-size: 16px;
+margin-bottom: 0.5em;
+color: #fff;
+}
+
+
+/* Allow space between the rows of the collumn */
+.footer .column .column-title:not(:first-child) {
+margin-top: 0.5em;
+}
+
+/* Collumns allignment */
+@media only screen and (max-width: 990px) and (min-width: 200px) {
+body {
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+}
+.footer .column {
+width: 100%;
+height: 150px;
+font-size: 14px;
+text-align: center;
+}
