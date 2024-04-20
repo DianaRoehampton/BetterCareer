@@ -25,9 +25,6 @@
           import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
           import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
         </script>
-
-        <!-- Linked the script.js javaScript file -->
-        <script defer src="js/script.js"> </script>
         
         <!-- Customized Bootstrap Stylesheet -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -67,7 +64,7 @@
                         <a class="nav-link" href="courses.html"><b>Courses</b></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="careers.html"><b>Careers</b></a>
+                        <a class="nav-link" href="statistics.html"><b>Statistics</b></a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="about.html"><b>About Us</b></a>
@@ -189,9 +186,12 @@
                       </div>
               </form>
               </div>
-              <script>
-                  // Get the modal
-                  var modallog = document.getElementById('id01');
+
+            <script>
+                  // Get the modal for Log in
+                  var modallog = document.getElementById('id01'); 
+                  // Get the modal for registration
+                  var modalreg = document.getElementById('id02');
                   
                   // When the user clicks anywhere outside of the modal, close it
                   window.onclick = function(event) {
@@ -199,18 +199,15 @@
                           modallog.style.display = "none";
                       }
                   }
-              </script>
-              <script>
-                  // Get the modal
-                  var modalreg = document.getElementById('id02');
-                  
+                                  
                   // When the user clicks anywhere outside of the modal, close it
                   window.onclick = function(event) {
                       if (event.target == modalreg) {
                           modalreg.style.display = "none";
                       }
                   }
-              </script>
+            </script>  
+
       
         <!-- Line insertion -->
         <div class="row">
@@ -323,7 +320,7 @@
           </div>
         </div>
       </div>
-
+    </body>
 
 
 
@@ -337,7 +334,7 @@
         </div>
         
         <div class="column is-nav">
-            <div class="column-title"><a href="careers.html" style="color: #fff;">Careers</a></div>
+            <div class="column-title"><a href="statistics.html" style="color: #fff;">Statistics</a></div>
         </div>
         <div class="column is-nav">
             <div class="column-title"><a href="about.html" style="color: #fff;">Testimonials</a></div>
@@ -385,6 +382,12 @@
     </div>
 
 
+
+
+
+
 </footer>
-</body>
+
+<!-- Linked the script.js javaScript file to HTML -->
+<script src="C:\Users\crace\Desktop\Disertation\better-career\js\script.js"></script>
 </html>
