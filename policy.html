@@ -1,6 +1,5 @@
 <!-- Determined the document type the browser will opem -> HTML -->
 <!DOCTYPE html>
-
 <!-- Used the HTML marker for the entire page, with the language -> English  -->
 <html lang="en">
 
@@ -8,417 +7,353 @@
     <head>
         <!-- The title of the page -->
         <title>Better Career Privacy Policy Page</title>
-        <!-- The meta tags required -->
+        <!-- The meta tags is used to access the app in any browser -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Allow the page to adjust size by device -->
+        <meta name="keywords" content="online,training,admin,course,career"> <!-- The keywords for search engines -->
+        <meta name="author" content="Florentina Diana Cracea"> <!-- Web app author -->
       
-         <!-- Bootstrap library included -->
+         <!-- Bootstrap library included to introduce templates easily and Icon Font Stylesheet -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/site-core.css">
+
+        <!-- An icon library to show a hamburger menu (bars) on small screens -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <style>
-            /* Font setting */
-            body {font-family: Arial, Helvetica, sans-serif;}
-
-            /* All buttons style setting */
-            button {
-            background-color: #04aaaad2;
-            color: white;
-            padding: 10px 18px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: fit-content;
-            margin: 4px 2px;
-            border-radius: 12px;
-            font-size: 16px;
-            }
-            button:hover {
-            opacity: 0.8;
-            color:#0f46abd2
-            }
-
-            /* Image centre allignment */
-            .imgcontainer {
-            text-align: center;
-            margin: 24px 0 12px 0;
-            position: relative;
-            }
-
-            img.avatar {
-            width: 40%;
-            border-radius: 50%;
-            }
-
-            .container {
-            padding: 16px;
-            }
-
-
-            /*  Columns specifications */
-            .column {
-            float: left;
-            width: 50%;
-            padding: 10px;
-            }
-            .row:after {
-            content: "";
-            display: table;
-            clear: both;
-            }
-
-            /* Fields input - allow full-width  */
-            input[type=text], input[type=password]
-            {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-            }
-
-            /* Cancel button additional styles */
-            .cancelbtn {
-            width: auto;
-            padding: 10px 18px;
-            background-color: #f44336;
-            }
-
-            /*  Close button position  */
-            span.psw {
-            float: right;
-            padding-top: 16px;
-            }
-
-             /* The Close Button (x) */
-             .close {
-            position: absolute;
-            right: 25px;
-            top: 0;
-            color: #000;
-            font-size: 35px;
-            font-weight: bold;
-            }
-
-            /* Change the Close Button (x) to red once hovered over */
-            .close:hover,
-            .close:focus {
-            color: red;
-            cursor: pointer;
-            }
-
-
-            /*  Styles change for span and cancel button on extra small screens */
-            @media screen and (max-width: 300px) {
-            span.psw {
-                display: block;
-                float: none;
-            }
-            .cancelbtn {
-                width: 100%;
-            }
-            }
-
-            /* The Modal (background) */
-            .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(184, 247, 239, 0.821); /* Black w/ opacity */
-            padding-top: 60px;
-            }
-
-            /* Modal Content/Box */
-            .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-            border: 1px solid #329685;
-            width: 50%; /* Varries based on the screen size */
-            }
-
-            /*  Footer */
-            .footer {
-            display:flow-root;
-            width: 100%;
-            position: relative;
-            background: #07a78c;
-            padding: 150px 25px 50px 25px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-        }
-        .footer-start {
-            display: flex;
-            position: relative;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1280px;
-            width: 90%;
-            margin: auto;
-            padding: 80px 100px;
-            background: #705df2;
-            border-radius: 15px;
-        }
-        .start-learning {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: -150px;
-        }
-
-        /* Footer inner allignment */
-        .footer .inner {
-            display: flex;
-            align-items: self-start;
-            justify-content: space-between;
-            column-gap: 20px;
-            row-gap: 20px;
-            max-width: 1180px;
-            margin: auto;
-            text-align: left;
-        }
-
-        /* Logo position */
-        .main-logo {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-        .main-logo .logo > img {
-            display: block;
-            width: 100%;
-            min-width: 40px;
-        }
-        .text {
-            font-size: 17px;
-            line-height: 17px;
-            color: #fff;
-            letter-spacing: .18em;
-            font-weight: 600;
-        }
-        .copyright {
-            color: #fff;
-            font-size: 12px;
-            line-height: 12px;
-        }
-
-        .footer .column .column-title {
-            font-weight: 300;
-            font-size: 16px;
-            margin-bottom: 0.5em;
-            color: #fff;
-        }
-
-
-        /* Allow space between the rows of the collumn */
-        .footer .column .column-title:not(:first-child) {
-            margin-top: 0.5em;
-        }
-
-        /* Collumns allignment */
-        @media only screen and (max-width: 990px) and (min-width: 200px) {
-            body {
-                height: 100vh;
-                overflow-y: scroll;
-                overflow-x: hidden;
-            }
-        }
-        .footer .column {
-            width: 100%;
-            height: 150px;
-            font-size: 14px;
-            text-align: center;
-        }
-        </style>
+        
+        <!-- Imported the functions needed from the SDKs -->
+        <script defer type="module">
+          import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+          import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+        </script>
+        
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+            
+        <!-- Template Stylesheet created for Better Career -->
+        <link href="css/style.css" rel="stylesheet">
     </head>
 
 
-
-    <!-- Privacy Policy page content cutomisation -->
-    <body>
-        <!-- Navigation Bar cutomisation -->
-    <div class="main-container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-            <!-- Adapted the container to the full size (12 columns) of the screen with "fluid" -->
-            <div class="container-fluid">
-              <a class="navbar-brand" href="home.html"><img src="C:\Users\crace\Desktop\Disertation\Better Career\Images\BC Logo.png"></a>
-              <!--Vavigation bar only collapse and does not hide -->
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                  
-                <!-- The link and definition of the buttons in the header -->
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="home.html">Home</a> 
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="courses.html">Courses</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="careers.html">Careers</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                  </li>
-                </ul>
-
-
-
-                <!-- ---------    Button to open the modal login form    ---------- -->
-                <button onclick="document.getElementById('id01').style.display='inline-block'">Login</button>
-
-                <!-- The Modal -->
-                <div id="id01" class="modal">
-                <span onclick="document.getElementById('id01').style.display='none'"
-                class="close" title="Close Modal">&times;</span>
- 
-                <!-- Modal Content -->
-                <form class="modal-content animate" action="/action_page.php">
-                    <div class="imgcontainer">
-                    <img src="C:\Users\crace\Desktop\Disertation\Better Career\Images\Men22.png" alt="Avatar" class="avatar">
-                    </div>
-
-                    <div class="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
-
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-
-                    <button type="submit">Login</button>
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember"> Remember me
-                    </label>
-                    </div>
-                    
-                    <!-- Modal backround style -->
-                    <div class="container" style="background-color:#f1f1f1ec; ">
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                    <span class="psw">Forgot <a href="#">password?</a></span>
-                    </div>
-                </form>
-                </div>
+    <header>
+        <!-- About Us page content cutomisation -->
+        <body>
+            <!-- Navigation Bar cutomisation -->
+            <div class="main-container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                    <!-- Adapted the container to the full size (12 columns) of the screen with "fluid" -->
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="index.html"><img src="https://drive.google.com/thumbnail?id=1IXan9xedkrfvfHQjM0bSVzNCcepIi8_o"></a>
+                      <!--Vavigation bar only collapse and does not hide -->
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" 
+                      aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+        
+                      <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                          
+                        <!-- The link and definition of the buttons in the header -->
+                        <!-- Using the function: <class="nav-link active" aria-current="page"> to underline the current page-->
+                            <li class="nav-item">
+                            <a class="nav-link" href="index.html"><b>Home</b></a> 
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="courses.html"><b>Courses</b></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="statistics.html"><b>Statistics</b></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="about.html"><b>About Us</b></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="contact.html"><b>Contact</b></a>
+                          </li>
+                        </ul>
+    
+    
+                        <div class="subnav">
+                          <img src="https://drive.google.com/thumbnail?id=1gb4YRY_cPKaT2wni040cwhO1ifm-aQW0" 
+                          class="subnavbtn">
+                          <div class="subnav-content">
+                              <!-- ---------    Link to open the modal login form    ---------- -->
+                              <a href="#linklog" onclick="document.getElementById('id01').style.display='inline-block'">Log in</a>
+                              <!-- ---------    Link to open the modal register form    ---------- -->
+                              <a href="#linkreg" onclick="document.getElementById('id02').style.display='inline-block'">Register</a>
+                              <a href="dashboard.html">My Dashboard</a>
+                        </div>
+                      </div>
+          
+                      <!-- Cart Button to open the cart page -->
+                      <a href="cart.html">
+                          <button style="font-size:16px"><i class="fa fa-cart-arrow-down"></i></button>
+                      </a>
+          
+                  </nav>
+          
               </div>
-            </div>
-          </nav>
-    </div>
-
-    <!-- Line insertion -->
-    <div class="row">
-        <hr>
-    </div>
-
-
-
-    <!-- Page section 2 -->
-    <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-2 offset-1" >
-            <h3>Section 2 Col 1</h3>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-2 offset-2" >
-            <h3>Section 2 Col 2</h3>
-        </div>
-    </div>
-
-    <!-- Page section 3 -->
-    <div class="row" style="background-color:#11908585;">
-        <div class="col-sm-12 col-md-6 col-lg-2 offset-1">
-            <h3>Section 3 Col 1</h3>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-2 offset-2" >
-            <h3>Section 2 Col 2</h3>
-        </div>
-    </div>
-
-    <!-- Page section 4 -->
-    <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-2 offset-1" >
-            <h3>Section 4 Col 1</h3>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-2 offset-2" >
-            <h3>Section 4 Col 2</h3>
-        </div>
-    </div>
-
-
-
-    <!-- Footer wil the elements alligned in the centre -->
-    <footer class="footer align-items-centre">
-
-        <!-- Footer columns customisation -->
-        <div class="inner">
-            <div class="column is-nav">
-                <div class="column-title"><a href="courses.html" style="color: #fff;">Courses</a></div>
-            </div>
-
-
-            
-            
-            <div class="column is-nav">
-                <div class="column-title"><a href="careers.html" style="color: #fff;">Careers</a></div>
-            </div>
-            <div class="column is-nav">
-                <div class="column-title"><a href="about.html" style="color: #fff;">Testimonials</a></div>
-            </div>
-
-            <!-- Company name & logo -->
-            <div class="column is-logo">
-                <a href="#" class="main-logo">
-                    <div class="logo"><a href="home.html" style="color: #fff;">
-                        <img src="C:\Users\crace\Desktop\Disertation\Better Career\Images\BC Logo.png" alt="bettercareer"></a>
-                    </div>
-                    <div class="logo-info">
-                        <div class="text"><a href="home.html" style="color: #fff;">Better Career</a></div>
-                    </div>
-                </a>
-
-
-                <!-- Subscribe -->
-                <div class="col-12 col-md-12 box">
-                    <div class="Subscribe d-flex no-gutters">
-                      <div class="col-12">
-                        <input type="text" placeholder="Enter e-mail"> <!-- Text within the textbox -->
+          
+          
+    <header>
+        <!-- The Modal (contains the Log In form) -->
+        <div id="id01" class="modallog">
+           
+                  <!-- Modal Content -->
+                  <!-- Send the data from the form to the Realtime Database in Firebase -->
+                  <form class="modallog-content animate" action="/https://bettercareer-27033-default-rtdb.firebaseio.com/" method="post">   
+                      <div class="imgcontainer">
+                          <h1>Login</h1>
+                          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                          <img src="https://drive.google.com/thumbnail?id=1CcB7ubF7vhffaXtPDhBkATErvlviThz7" alt="Avatar" class="avatar">
+                          <!-- Insert a new paragraph -->
+                          <p>Please fill in this form to login.</p>
                       </div>
-                      <div class="col-4">
-                        <button>Subscribe</button>
+          
+                      <div class="container">
+                      <label for="uname"><b>Username</b></label>
+                      <input type="text" placeholder="Enter Username" id="uname" required>
+          
+                      <label for="psw"><b>Password</b></label>
+                      <input type="password" placeholder="Enter Password" id="psw" required>
                       </div>
-                    </div>
+                  
+                      <!-- Modal backround style -->
+                      <div class="container" style="background-color:#f1f1f1ec;">
+                      <label>
+                      <input type="checkbox" checked="checked" name="remember"> Remember me
+                      </label>
+                      <br>
+                      <button type="submit" id="logMe">Login</button>  
+                      <button type="button" onclick="document.getElementById('id01').style.display='none'" 
+                      class="cancelbtn">Cancel</button>
+                      <span class="psw"><a href="#" style="color: #329685;">Forgot password?</a></span>
+                      </div>
+                  </form>
+              </div>
+          
+          
+                 <!-- The Modal (contains the Registration form) -->
+                  <div id="id02" class="modalreg">
+                  <!-- Modal Content -->
+                  <form class="modalreg-content animate" action="/https://bettercareer-27033-default-rtdb.firebaseio.com/" method="get">
+                          <div class="imgcontainer">
+                          <h1>Register</h1>
+                          <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                          <img src="https://drive.google.com/thumbnail?id=1CcB7ubF7vhffaXtPDhBkATErvlviThz7" alt="Avatar" class="avatar">
+                          <p>Please fill in this form to create an account.</p>
+                          </div>
+                      
+                          <div class="container">
+                          <label for="username"><b>Usarname</b></label>
+                          <input type="text" name="username" placeholder= "Username" required /> 
+                          <label for="email"><b>Email</b></label>
+                          <input type="text" placeholder="Enter Email" name="email" required>
+                          
+                          <label for="psw"><b>Password</b></label>
+                          <input type="password" placeholder="Enter Password" name="psw" required>
+          
+                          <label for="psw-repeat"><b>Repeat Password</b></label>
+                          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+          
+                          <label>Interested in:
+                          <select>
+                              <option value="Blank"> </option> 
+                              <option value="Career">Finding the best career for me.</option>  
+                              <option value="Evolve">Improve my knoladge.</option>  
+                              <option value="Skills">Gain new skills.</option>  
+                              <option value="Interview">How to prepare for an interview.</option>  
+                              </select>
+                          </label>
+          
+                          <label>   
+                              Age group:&emsp;  <!-- Used &emsp to create a double space between values --> 
+                              <input type="radio" value="20s" name="Age"> 15-20 &ensp; <!-- Used &ensp to create one space --> 
+                              <input type="radio" value="40s" name="Age"> 20-40 &ensp;   
+                              <input type="radio" value="70" name="Age"> 40-60 &ensp;
+                          </label>
+                          </div>
+          
+                          <div class="container" style="background-color:#f1f1f1ec;">
+                          <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                          <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+                              <br> <!-- Add a break & Move to the next row --> 
+                              <button type="submit" class="register">Register</button>
+                              <button type="button" onclick="document.getElementById('id02').style.display='none'" 
+                              class="cancelbtn">Cancel</button>
+                          </div>
+                  </form>
                   </div>
 
+                  <script>
+                    // Get the modal for Log in
+                    var modallog = document.getElementById('id01'); 
+                    // Get the modal for registration
+                    var modalreg = document.getElementById('id02');
+                    
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modallog) {
+                            modallog.style.display = "none";
+                        }
+                    }
+                                    
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modalreg) {
+                            modalreg.style.display = "none";
+                        }
+                    }
+              </script>  
+          
+            <!-- Line insertion -->
+            <div class="row">
+                  <hr>
+            </div>
+    </header>
+    <!-- ---------   The End of Navigation Bar cutomisation and the Modal Forms   ---------- -->
 
 
-                <div class="column-title"><a href="policy.html" style="color: #fff;">Privacy Policy | Terms & Conditions</a></div>
-                <span class="copyright">© 2024. All rights reserved.</span>
-            </div>
+<body> 
+<secion>
+<!-- Page section 1 -->
+<div class="about-section" active" aria-current="page">
+  <h1><b>Better Career Privacy Policy</b></h1>
+</div>
+      <div class="container" style="background-color: aliceblue;">
+        <h2 style="text-align:center"><b>Our Policy</b></h2>
+            <h4>
+                This privacy policy sets out how Better Career uses and protects any information that you give Better Career 
+                when you use this website.
 
+                Better Career is committed to ensuring that your privacy is protected. Should we ask you to provide 
+                certain information by which you can be identified when using this website, then you can be assured 
+                that it will only be used in accordance with this privacy statement.
 
-            <div class="column is-nav">
-                <div class="column-title"><a href="contact.html" style="color: #fff;">Contact Us</a></div>
-            </div>
-            <div class="column is-nav">
-                <div class="column-title"><a href="home.html" style="color: #fff;">Statistics</a></div>
-            </div>
-            <div class="column is-nav">
-                <div class="column-title"><a href="about.html" style="color: #fff;">About Us</a></div>
-            </div>
+                Better Career may change this policy from time to time by updating this page. 
+                You should check this page from time to time to ensure that you are happy with any changes. 
+                This policy is effective from 1st March 2011.
+            </h4>
+            <hr class="my-4" style="color: aqua;">
+            <h3><b>What we collect</b></h3>
+            <h4>
+                We may collect the following information: <br>
+                - name and job title <br>
+                - contact information including email address and phone number <br>
+                - demographic information such as postcode, preferences and interests <br>
+                - other information relevant to customer surveys and/or offers <br>
+            </h4>
+            <hr class="my-4" style="color: aqua;">
+            <h3><b>What we do with the information we gather</b></h3>
+            <h4>
+                We require this information to understand your needs and provide you with a better service, 
+                and in particular for the following reasons:
+
+                Internal record keeping.
+                We may use the information to improve our products and services.
+                We may contact you by email or phone to advise you if your course has been cancelled or joining 
+                instructions have changed.
+                We may periodically send promotional emails about new products, special offers or other information 
+                which we think you may find interesting using the email address which you have provided.
+                From time to time, we may also use your information to contact you for market research purposes. 
+                We may contact you by email, phone, fax or mail. We may use the information to customise the 
+                website according to your interests.
+            </h4>
+            <hr class="my-4" style="color: aqua;">
+            <h3><b>Security</b></h3>
+            <h4>
+                We are committed to ensuring that your information is secure. 
+                In order to prevent unauthorised access or disclosure,we have put in place suitable physical, 
+                electronic and managerial procedures to safeguard and secure the information we collect online.
+            </h4>
+            <hr class="my-4" style="color: aqua;">
+            <h3><b>Controlling your personal information</b></h3>
+            <h4>
+                You may choose to restrict the collection or use of your personal information. 
+                To do this, please email us at <b>craceaf@roehampton.ac.uk</b>. if you have previously agreed to us using your 
+                personal information for direct marketing purposes, you may change your mind 
+                at any time by writing to or emailing us at <b>craceaf@roehampton.ac.uk</b>.
+                We will not sell, distribute or lease your personal information to third parties unless 
+                we have your permission or are required by law to do so. We may use your personal information 
+                to send you promotional information about third parties which we think you may find interesting 
+                if you tell us that you wish this to happen.
+
+                You may request details of personal information which we hold about you under the
+                 Data Protection Act 1998. A small fee will be payable.
+                 If you believe that any information we are holding on you is incorrect or incomplete, 
+                 please email us as soon as possible.
+            </h4>
         </div>
-    </footer>
+        <br>
+    </secion>
 
-    </body>
+   <!-- Footer with the elements alligned in the centre -->
+   <footer class="footer align-items-centre">
+
+    <!-- Footer columns customisation -->
+    <div class="inner">
+        <div class="column is-nav">
+            <div class="column-title"><a href="courses.html" style="color: #fff;">Courses</a></div>
+        </div>
+        
+        <div class="column is-nav">
+            <div class="column-title"><a href="statistics.html" style="color: #fff;">Statistics</a></div>
+        </div>
+        <div class="column is-nav">
+            <div class="column-title"><a href="about.html" style="color: #fff;">Testimonials</a></div>
+        </div>
+
+        <!-- Company name & logo -->
+        <div class="column is-logo">
+            <a href="#" class="main-logo">
+                <div class="logo"><a href="index.html" style="color: #fff;">
+                    <img src="https://drive.google.com/thumbnail?id=1IXan9xedkrfvfHQjM0bSVzNCcepIi8_o" alt="bettercareer"></a>
+                </div>
+                <div class="logo-info">
+                    <div class="text"><a href="index.html" style="color: #fff;">Better Career</a></div>
+                </div>
+            </a>
+
+
+            <!-- Subscribe -->
+            <div class="col-12 col-md-12 box">
+                <div class="Subscribe d-flex no-gutters">
+                  <div class="col-12">
+                    <input type="text" placeholder="Enter e-mail"> <!-- Text within the textbox -->
+                  </div>
+                  <div class="col-4">
+                    <button>Subscribe</button>
+                  </div>
+                </div>
+              </div>
+
+
+            <div class="column-title"><a href="policy.html" style="color: #fff;">Privacy Policy | 
+                Terms & Conditions</a></div>
+            <span class="copyright">© 2024. All rights reserved.</span>
+        </div>
+
+
+        <div class="column is-nav">
+            <div class="column-title"><a href="contact.html" style="color: #fff;">Contact Us</a></div>
+        </div>
+        <div class="column is-nav">
+            <div class="column-title"><a href="statistics.html" style="color: #fff;">Statistics</a></div>
+        </div>
+        <div class="column is-nav">
+            <div class="column-title"><a href="about.html" style="color: #fff;">About Us</a></div>
+        </div>
+    </div>
+
+
+
+
+
+<!-- Linked the local script.js javaScript file to HTML -->
+<script src="C:\Users\crace\Desktop\Disertation\better-career\js\script.js"></script>
+
+<!-- Define Firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+
+</footer>
+</body>
 </html>
-
-
