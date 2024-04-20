@@ -68,7 +68,7 @@
                         <a class="nav-link" href="courses.html"><b>Courses</b></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="careers.html"><b>Careers</b></a>
+                        <a class="nav-link" href="statistics.html"><b>Statistics</b></a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="about.html"><b>About Us</b></a>
@@ -227,18 +227,18 @@
             <img src="https://drive.google.com/thumbnail?id=1CcB7ubF7vhffaXtPDhBkATErvlviThz7" controls poster="images/post-1-1.png" id="image"
             style="border-color: #329685; border-width: 2px; border-style: inset; width: 200px;"">
          </div>
-        <a class="active" href="profile.html">My Profile</a>
-        <a href="courses.html">Courses</a>
+        <a class="active" href="dashboard.html">My Dashboard</a>
+        <a href="courses.html">My Courses</a>
+        <a href="career.html">My Career</a>    
+        <hr>
       </div>
+    </div>
 
-      <section class="user-profile" 
-      style="align-items: center; 
-      padding:2rem; margin: 0 auto; 
+
+      <section class="user-profile" style="align-items: center; padding:2rem; margin: 0 auto; 
       max-width: 1200px; background-color: aliceblue; padding-bottom: 10px;">
 
-
-          
-        <h1 class="heading">your profile</h1>
+        <h1 class="heading">Dashboard</h1>
 
         <div class="info">
      
@@ -263,7 +263,7 @@
               <div class="box" style="background-color: #fff; border-radius:20px; border-color: aqua; border-width: 2px; border-style: inset;">
                  <div class="flex">
                     <div>
-                       <p><span>Badges</span></p>
+                       <p><span>Courses Badges</span></p>
                        <svg class="badge"  height="140" width="140" viewBox="-40 -40 440 440">
                         <circle class="outer" fill="#F9D535" stroke="#fff" stroke-width="8" stroke-linecap="round" cx="180" cy="180" r="157"/>
                         <circle class="inner" fill="#DFB828" stroke="#fff" stroke-width="8" cx="180" cy="180" r="108.3"/>
@@ -275,10 +275,28 @@
                           <circle fill="#DFB828" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" cx="135.5" cy="244.2" r="4.4"/>
                           <circle fill="#DFB828" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" cx="108.3" cy="160.4" r="4.4"/>
                           <circle fill="#DFB828" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" cx="251.7" cy="160.4" r="4.4"/>
-                          <h1>2</h1>
+                          <div id="total" style="text-align:left; color: rgb(112, 221, 3); font-size:55px;">0</div>
                         </g>  
                       </svg>
                     </div>
+
+                    <script>
+                      // Update the total of badges when the page loads and when the totalUpdated event is triggered
+                      function updateTotal() {
+                        document.getElementById('total').textContent = localStorage.getItem('total');
+                      }
+                  
+                      // Update the total when the page loads
+                      document.addEventListener('DOMContentLoaded', function() {
+                        updateTotal();
+                      });
+                  
+                      // Listen for the totalUpdated event to update the total
+                      window.addEventListener('totalUpdated', function() {
+                        updateTotal();
+                      });
+                    </script>
+
                  </div>
               </div>
         
@@ -288,14 +306,71 @@
                        <span>Admin</span>
                        <p>Career</p>
                     </div>
+
+
                     <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" 
-                        role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">
-                        5% Completed
+                        <div id="level" class="progress-bar progress-bar-striped progress-bar-animated" 
+                        role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        0%
                         </div>
                       </div>
-                 </div>
-                 <a href="videoCareer.html"><button> View Courses </button></a>
+                      <script>
+
+                        // Function to get progress width based on stage
+                        function getProgressWidth(stage) {
+                          switch (stage) {
+                            case 'part-one':
+                              return '25%';
+                            case 'part-two':
+                              return '50%';
+                            case 'part-three':
+                              return '75%';
+                            case 'part-four':
+                              return '100%';
+                            default:
+                              return '0';
+                          }
+                        }
+                        
+                        // Function to get progress text based on stage
+                        function getProgressText(stage) {
+                          switch (stage) {
+                            case 'part-one':
+                              return '25% Completed';
+                            case 'part-two':
+                              return '50% Completed';
+                            case 'part-three':
+                              return '75% Completed';
+                            case 'part-four':
+                              return '100% Completed';
+                            default:
+                              return '0% Completed';
+                          }
+                        }
+                        
+                        // Listen for changes in localStorage and update the progress bar accordingly
+                        window.addEventListener('storage', function(event) {
+                          if (event.key === 'progress') {
+                            updateProgressBar(event.newValue);
+                          }
+                        });
+
+                        // Update the progress bar when the page loads
+                        document.addEventListener('DOMContentLoaded', function() {
+                          var progressData = localStorage.getItem('progress');
+                          if (progressData !== null) {
+                            updateProgressBar(progressData);
+                          }
+                        });
+
+                        function updateProgressBar(stage) {
+                          var progressBar = document.getElementById('level');
+                          progressBar.style.width = getProgressWidth(stage);
+                          progressBar.textContent = getProgressText(stage);
+                        }
+                        </script>
+                  </div>
+                 <a href="career.html"><button> View Courses </button></a>
               </div>
            </div>
         </div>
@@ -313,7 +388,7 @@
             </div>
             
             <div class="column is-nav">
-                <div class="column-title"><a href="careers.html" style="color: #fff;">Careers</a></div>
+                <div class="column-title"><a href="statistics.html" style="color: #fff;">Statistics</a></div>
             </div>
             <div class="column is-nav">
                 <div class="column-title"><a href="about.html" style="color: #fff;">Testimonials</a></div>
