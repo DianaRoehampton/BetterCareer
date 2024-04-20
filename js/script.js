@@ -19,4 +19,39 @@ const firebaseConfig = {
   // whitch will catch the returned objects
   var betterCareerDB = firebase.database().ref('betterCareer');
 
-  
+
+
+
+const db = getDatabase();
+        const auth = getAuth(app);
+        const dbref = ref(db);
+
+        let User = document.getElementById('username');
+        let Email = document.getElementById('email');
+        let Password = document.getElementById('pwd');
+        let id02 = document.getElementById('reg');
+
+
+        let SignInUser = evt =>{
+          evt.preventDefault();
+
+          signInWithEmailAndPassword(auth, Email.value, Password.value)
+          .then((credentials)=>{
+              get(child(dbref, '/UserAuthList' + credentials.user.uid)).then((snaphot)=>{
+                  if(snapshot.exists){
+                      sessionStorage.setItem("user-info", JSON.stringify({
+                          name: snapshot.val().name
+                      }))
+                      sessionStorage.setItem("user-creds", JSON.stringify(credentials.user));
+                      window.location.href ='home.html'
+                  }
+              })
+          })
+          .catch((error)=>{
+              alert(error.message);
+              console.log(error.code);
+              console.log(error.message);
+          })
+      }
+
+      Form.addEventListener('submit', SignInUser);
