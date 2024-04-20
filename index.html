@@ -20,23 +20,15 @@
         <!-- An icon library to show a hamburger menu (bars) on small screens -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
-        <!-- Imported the functions needed from the SDKs -->
-        <script defer type="module">
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-            import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
-        </script>
+        <!-- Define Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
 
-        <!-- Linked the script.js javaScript file -->
-        <script defer src="js/script.js"> </script>
-        
         <!-- Customized Bootstrap Stylesheet -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
             
         <!-- Template Stylesheet created for Better Career -->
         <link href="css/style.css" rel="stylesheet">
 
-        <!-- Define Firebase -->
-        <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
     </head>
 
 <header>
@@ -64,7 +56,7 @@
                     <a class="nav-link" href="courses.html"><b>Courses</b></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="careers.html"><b>Careers</b></a>
+                    <a class="nav-link" href="statistics.html"><b>Statistics</b></a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="about.html"><b>About Us</b></a>
@@ -148,7 +140,7 @@
             
                 <div class="container">
                 <label for="username"><b>Usarname</b></label>
-                <input type="text" name="username" placeholder= "Username" required /> 
+                <input type="text" placeholder= "Username" name="username" required /> 
                 <label for="email"><b>Email</b></label>
                 <input type="text" placeholder="Enter Email" name="email" required>
                 
@@ -187,8 +179,10 @@
         </form>
         </div>
         <script>
-            // Get the modal
-            var modallog = document.getElementById('id01');
+            // Get the modal for Log in
+            var modallog = document.getElementById('id01'); 
+            // Get the modal for registration
+            var modalreg = document.getElementById('id02');
             
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {
@@ -196,18 +190,14 @@
                     modallog.style.display = "none";
                 }
             }
-        </script>
-        <script>
-            // Get the modal
-            var modalreg = document.getElementById('id02');
-            
+                            
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {
                 if (event.target == modalreg) {
                     modalreg.style.display = "none";
                 }
             }
-        </script>
+      </script>  
 
         <!-- Line insertion -->
         <div class="row">
@@ -330,9 +320,9 @@
         <div class="section" style="padding: 50px;">
         <!-- Home page section 4 -->
             <h2><b>Testimonials</b></h2>
-            <div class="col-lg-3 offset-0">
+            <div class="col-lg-3">
                 
-                <div class="col-sm-12 col-md-6 col-lg-3 offset-2" style="padding-left: 250px; padding-bottom: 20px;">
+                <div class="col-sm-12 col-md-6 col-lg-3 offset-2" style="padding-left: 170px; padding-bottom: 20px;">
                     <div class="box" 
                     style="background-color: white; text-align: center;  width: 1700px; border-radius:20px; border-color: aqua; border-width: 2px; border-style: inset;">
                     
@@ -369,7 +359,7 @@
         </div>
         
         <div class="column is-nav">
-            <div class="column-title"><a href="careers.html" style="color: #fff;">Careers</a></div>
+            <div class="column-title"><a href="statistics.html" style="color: #fff;">Statistics</a></div>
         </div>
         <div class="column is-nav">
             <div class="column-title"><a href="about.html" style="color: #fff;">Testimonials</a></div>
@@ -416,8 +406,10 @@
             <div class="column-title"><a href="about.html" style="color: #fff;">About Us</a></div>
         </div>
     </div>
-
-
-
 </footer>
+
+<!-- Linked the script.js javaScript file to HTML -->
+<script src="C:\Users\crace\Desktop\Disertation\better-career\js\script.js"></script>
+
+
 </html>
