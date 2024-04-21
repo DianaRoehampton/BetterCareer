@@ -36,34 +36,65 @@ const firebaseConfig = {
 
 
 
-
-  
-// Add an event listener to the registration form submission
+// Function to close the modal
+function closeModal() {
+    document.getElementById('id02').style.display = 'none';
+}
+// Function to handle registration form submission
 document.getElementById('registrationForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault(); // Prevent the form from submitting normally
 
-    // Get user input values
-    const username = document.querySelector('input[name="username"]').value;
-    const email = document.querySelector('input[name="email"]').value;
-    const password = document.querySelector('input[name="psw"]').value;
-    const passwordRepeat = document.querySelector('input[name="psw-repeat"]').value;
+ // Get user input
+        let username = document.getElementById('username');
+        let email = document.getElementById('email');
+        let psw = document.getElementById('pwd');
+        let id02 = document.getElementById('reg');
+        let scope = document.getElementById('scope');
+        let age = document.getElementById('age');
 
-   
-    // Create a new user account with email and password
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-            // User registered successfully
-            const user = userCredential.user;
-            console.log('User registered:', user);
 
-            
-        })
-        .catch((error) => {
-            // Handle errors
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.error('Registration error:', errorMessage);
-            // Display error message to the user
-            alert(errorMessage);
-        });
-});
+
+        let SignInUser = evt =>{
+          evt.preventDefault();
+
+          signInWithEmailAndPassword(auth, email.value, Password.value)
+          .then((credentials)=>{
+              get(child(dbref, '/UserAuthList' + credentials.user.uid)).then((snaphot)=>{
+                  if(snapshot.exists){
+                      sessionStorage.setItem("user-info", JSON.stringify({
+                          name: snapshot.val().name
+                      }))
+                      sessionStorage.setItem("user-creds", JSON.stringify(credentials.user));
+                      window.location.href ='home.html'
+                  }
+              })
+          })
+          .catch((error)=>{
+              alert(error.message);
+              console.log(error.code);
+              console.log(error.message);
+          })
+}
+
+      Form.addEventListener('submit', SignInUser);
+})
+
+
+// Get the modal for Log in
+var modallog = document.getElementById('id01'); 
+// Get the modal for registration
+var modalreg = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modallog) {
+        modallog.style.display = "none";
+    }
+}
+                
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modalreg) {
+        modalreg.style.display = "none";
+    }
+}
