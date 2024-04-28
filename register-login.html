@@ -1,0 +1,367 @@
+<!-- Determined the document type the browser will opem -> HTML -->
+<!DOCTYPE html>
+
+<!-- Used the HTML marker for the entire page, with the language -> English  -->
+<html lang="en">
+  <!-- Registration/Login page cutomisation -->
+  <head>
+    <!-- The title of the page -->
+    <title>Better Career Register | Login Page</title>
+    <!-- Web app author -->
+    <meta name="author" content="Florentina Diana Cracea" />
+
+    <!-- The meta tags is used to access the app in any browser -->
+    <meta charset="utf-8" />
+
+    <!-- Allow the page to adjust size by device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!----------------------------------------- CSS ----------------------------------------->
+    <!-- Bootstrap library included to introduce templates easily and Icon Font Stylesheet -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Connect to the Template Stylesheet created for the Profile pages realted  -->
+    <link rel="stylesheet" href="css/profile-details.css" />
+  </head>
+
+  <body>
+    <!----------------------------- Registration - Login Container ----------------------------->
+    <div class="container">
+      <div class="bgBlob bgBlob--2"></div>
+
+      <div class="form-body">
+        <div class="form-body-img">
+          <img
+            src="https://drive.google.com/thumbnail?id=1CcB7ubF7vhffaXtPDhBkATErvlviThz7"
+            alt="Avatar"
+            class="avatar"
+          />
+        </div>
+
+        <!-- Registration - Login Tabs Buttons -->
+        <nav class="account-tabs">
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button
+              class="nav-link active"
+              id="nav-home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-home"
+              type="button"
+              role="tab"
+              aria-controls="nav-home"
+              aria-selected="true"
+            >
+              Registration
+            </button>
+            <button
+              class="nav-link"
+              id="nav-profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-profile"
+              type="button"
+              role="tab"
+              aria-controls="nav-profile"
+              aria-selected="false"
+            >
+              Login
+            </button>
+          </div>
+        </nav>
+
+        <!-- Registration - Login Content -->
+        <div class="tab-content" id="nav-tabContent">
+          <!-- Register Form -->
+          <div
+            class="tab-pane fade show active"
+            id="nav-home"
+            role="tabpanel"
+            aria-labelledby="nav-home-tab"
+          >
+            <form class="form-reg">
+              <div class="field-holder">
+                <label for="fn">Username</label>
+                <input
+                  type="text"
+                  name="Username"
+                  placeholder="Username"
+                  id="fn"
+                  required
+                />
+              </div>
+              <div class="field-holder">
+                <label for="mail">Email</label>
+                <input
+                  type="email"
+                  name="Email"
+                  placeholder="Your e-mail address"
+                  id="mail"
+                  required
+                />
+              </div>
+              <div class="field-holder">
+                <label for="ps">Password</label>
+                <input
+                  type="password"
+                  name="Password"
+                  placeholder="Your password"
+                  id="ps"
+                  required
+                />
+              </div>
+              <div class="field-holder">
+                <label for="rps">Repeat password</label>
+                <input
+                  type="password"
+                  name="Reapeat Password"
+                  placeholder="Reapeat your password"
+                  id="rps"
+                  required
+                />
+              </div>
+
+              <div class="field-line">
+                <label
+                  >Interested in:
+                  <select>
+                    <option value="Career">
+                      Finding the best career for me.
+                    </option>
+                    <option value="Evolve">Improve my knoladge.</option>
+                    <option value="Skills">Gain new skills.</option>
+                    <option value="Interview">
+                      How to prepare for an interview.
+                    </option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="field-line">
+                <label class="d-flex justify-start">
+                  <span class="label-text">Age group:&emsp; </span
+                  ><!-- Used &emsp yo create a double space between values -->
+                  <div class="radio-group">
+                    <input type="radio" value="20s" name="Age" /> 15-20 &ensp;
+                    <!-- Used &ensp to create one space -->
+                    <input type="radio" value="40s" name="Age" /> 20-40 &ensp;
+                    <input type="radio" value="60" name="Age" /> 40-60 &ensp;
+                  </div>
+                </label>
+              </div>
+
+              <input
+                type="button"
+                name="Register"
+                id="register"
+                value="Register"
+              />
+
+              <div class="field-line">
+                <div class="disclaimer">
+                  <p>
+                    By creating an account you agree to our
+                    <a href="policy.html" style="color: dodgerblue"
+                      >Terms & Privacy</a
+                    >.
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Login Form -->
+          <div
+            class="tab-pane fade"
+            id="nav-profile"
+            role="tabpanel"
+            aria-labelledby="nav-profile-tab"
+          >
+            <form class="form-login">
+              <div class="field-holder">
+                <label for="user-email">E-mail</label>
+                <input
+                  type="email"
+                  name="Email"
+                  placeholder="Your e-mail address"
+                  id="user-email"
+                  required
+                />
+              </div>
+              <div class="field-holder">
+                <label for="user-pass">Password</label>
+                <input
+                  type="password"
+                  name="Password"
+                  placeholder="Your password"
+                  id="user-pass"
+                  required
+                />
+              </div>
+              <div class="field-line">
+                <!-- Remember Me checkbox -->
+                <label for="remember-me">
+                  <input type="checkbox" name="remember" id="remember-me" />
+                  Remember Me</label
+                >
+              </div>
+              <div class="buttons-container">
+                <input type="button" name="Login" id="login" value="Login" />
+                <input
+                  type="button"
+                  class="cancelbtn"
+                  name="cancel"
+                  id="cancel"
+                  value="Cancel"
+                />
+              </div>
+              <div class="field-line">
+                <span class="psw"
+                  ><a href="register-login.html" style="color: #329685"
+                    >Forgot password?</a
+                  ></span
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------------------------------------------- JavaScript Code --------------------------------------->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Auth script-->
+    <script type="module">
+      // Import the functions necessary from the SDKs needed
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+      import {
+        getDatabase,
+        set,
+        ref,
+        update,
+      } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+
+      import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        onAuthStateChanged,
+        signOut,
+      } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+
+      // The Better Career web app Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCp-FYM-77QwCtFEYA5yQCUpHMSTl6oJWc",
+        authDomain: "bettercareer-27033.firebaseapp.com",
+        databaseURL: "https://bettercareer-27033-default-rtdb.firebaseio.com",
+        projectId: "bettercareer-27033",
+        storageBucket: "bettercareer-27033.appspot.com",
+        messagingSenderId: "898798821793",
+        appId: "1:898798821793:web:2d6b543a871403d3376be0",
+        measurementId: "G-3YBVGWX48B",
+      };
+
+      // Firebase Initialisation
+      const app = initializeApp(firebaseConfig);
+      const database = getDatabase(app);
+      const auth = getAuth();
+
+      // User Registration
+      register.addEventListener("click", (e) => {
+        var username = document.getElementById("fn").value;
+        var email = document.getElementById("mail").value;
+        var password = document.getElementById("ps").value;
+        var age = document.querySelector('input[name="Age"]:checked').value; // Get selected age group
+        var interest = document.querySelector("select").value; // Get selected interest
+
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            // Signed up
+            const user = userCredential.user;
+
+            // Retrive user details
+            set(ref(database, "users/" + user.uid), {
+              username: username,
+              email: email,
+              role: "User",
+              age: age,
+              interest: interest,
+            });
+
+            // Alert the user that has to login after registration
+            alert("Welcome to Better Career! Please move to the login page.");
+          })
+          // If credentials are incorrect, alert the user
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert(
+              "Unable to connect, please make sure your details are complete/correct and try again! The password should have minimum 6 characters."
+            );
+          });
+      });
+
+      // User Login
+      // Function to handle login
+      function handleLogin(email, password) {
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+
+            const dt = new Date();
+            update(ref(database, "users/" + user.uid), {
+              last_login: dt,
+            });
+
+            const rememberMe = document.getElementById("remember-me").checked;
+            if (rememberMe) {
+              localStorage.setItem("userEmail", email);
+              localStorage.setItem("userPassword", password);
+            } else {
+              localStorage.removeItem("userEmail");
+              localStorage.removeItem("userPassword");
+            }
+            alert("Welcome to Better Career!");
+            window.location.href = "dashboard.html";
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert(errorMessage);
+          });
+      }
+
+      // Login button event listener
+      login.addEventListener("click", () => {
+        const email = document.getElementById("user-email").value;
+        const password = document.getElementById("user-pass").value;
+        handleLogin(email, password);
+      });
+
+      // Check if user credentials are stored in localStorage and fill the form
+      window.addEventListener("load", () => {
+        const userEmail = localStorage.getItem("userEmail");
+        const userPassword = localStorage.getItem("userPassword");
+        if (userEmail && userPassword) {
+          document.getElementById("user-email").value = userEmail;
+          document.getElementById("user-pass").value = userPassword;
+          document.getElementById("remember-me").checked = true;
+        }
+      });
+    </script>
+  </body>
+</html>
