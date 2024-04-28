@@ -1,0 +1,210 @@
+/* 1. Structure */
+
+html, body {
+    width: 100%;
+    min-height: 100% !important;
+    height: 0%;
+}
+
+.container {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+/* Background Image */
+body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://drive.google.com/thumbnail?id=1a7Vz7l3GlsA2wLCiPaWb-spkohrJGyAI');
+    background-size: 800px;
+    opacity: 0.3; /* Adjusting opacity */
+    z-index: -1; /* Setting a lower z-index to ensure it stays behind other content */
+}
+
+/* 2. Elements */
+
+.bgBlob {
+    position: absolute;
+    z-index: -1;
+}
+
+.bgBlob--2 {
+    top: 0%;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    
+}
+
+
+/* 3. Forms */
+
+
+/* login & registration */
+
+.form-body {
+    position: absolute;
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+    background: #f9f9f9;
+    -webkit-box-shadow: 0px 0px 23px 4px rgba(0,0,0,0.27); 
+    box-shadow: 0px 0px 23px 4px rgba(0,0,0,0.1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-body .form-body-img {
+    width: 120px;
+    height: 120px;
+    margin: 0px auto;
+}
+
+.form-body .form-body-img .avatar {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.form-body .title {
+    font-size: 1.3rem;
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+}
+
+.account-tabs {
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+
+.account-tabs a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+.account-tabs .nav-link {
+    padding: 15px;
+    border: none;
+    font-size: 1rem;
+    color: black;
+}
+
+.account-tabs .nav-link.active {
+    background-color: #04aaaad2;
+    color: white;
+}
+
+.tab-content {
+    margin-top: 30px;
+}
+
+
+.field-holder {
+    position: relative;
+    min-height: 30px;
+    padding-bottom: 5px;
+    margin-top: 15px;
+    width: 100%;
+  }
+  
+  label {
+    font-weight: 700;
+    margin: 0px;
+    padding-bottom: 5px;
+    font-size: 0.8rem;
+    color: black;
+  }
+  
+  input {
+    width: 100%;
+    font-size: 0.9rem;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    padding: 7px 12px 7px 12px;
+    border-radius: 5px;
+    outline: none;
+    margin: 7.5px 0px 15px 0px;
+    clear: both;
+  }
+  input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  /* Style for buttons */
+input[type="button"] {
+  display: inline-block; /* Display buttons inline */
+}
+
+/* When using flexbox */
+.buttons-container {
+  display: flex;
+}
+
+.buttons-container input[type="button"] {
+  min-width:150px;
+}
+
+.buttons-container input[type="button"].cancelbtn {
+  background-color: #ff0000; /* Set cancel button background color to red */
+}
+
+.field-line {
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center align items vertically */
+  justify-content: center; /* Center align items horizontally */
+}
+.field-line label {
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center align items vertically */
+  margin-right: 10px; /* Optional: Add margin between checkbox and text */
+}
+
+.field-line label input[type="checkbox"] {
+  margin-right: 5px; /* Optional: Add margin between checkbox and text */
+}
+
+.radio-group {
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center align items vertically */
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px; /* Optional: Add margin between radio buttons */
+}
+
+  input[type=button] {
+    display: block;
+    width: auto;
+    min-width: 150px;
+    margin: 20px auto;
+    background-color: #04aaaad2;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    width: fit-content;
+  }
+
+  input[type=button]:hover {
+    opacity: 0.8;
+    color:#c9e917d2 /* Make the Button have a yellow shadow when hovered over */
+  }
