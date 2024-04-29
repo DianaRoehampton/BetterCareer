@@ -1,4 +1,4 @@
-/********** CSS File **********/
+/********** The Main Template CSS **********/
 
 /* Font setting */
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -37,7 +37,6 @@ border-radius: 50%;
 padding: 16px;
 }
 
-
 /*  Columns specifications */
 .column {
 float: left;
@@ -69,7 +68,7 @@ box-sizing: border-box;
 h1 {
     text-align: center;
     font-size: 55px;
-    /* Here you can change angle of gardient also as 45deg here */
+    /* Change angle of gardient also as 45deg if necessary */
     background: linear-gradient(45deg,#00FF00,#038f70,#14dbd1d3,#48ff00,#FFFF00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -91,96 +90,6 @@ h2 {
     text-align: center;
   }
 
-
-/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
-/* The Login Modal Background */
-.modallog {
-display: none; /* Hidden by default */
-position: fixed; /* Stay in place */
-z-index: 1; /* Sit on top */
-left: 0;
-top: 0;
-width: 100%; /* Full width */
-height: 100%; /* Full height */
-overflow: auto; /* Enable scroll if needed */
-background-color: rgb(0,0,0); /* Fallback color */
-background-color: rgba(184, 247, 239, 0.821); /* Black w/ opacity */
-padding-top: 60px;
-}
-
-/* Modal Box */
-.modallog-content {
-background-color: #fefefe;
-margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-border: 1px solid #329685;
-width: 30%; /* Varries based on the screen size */
-}
-
-
-/* The Registration Modal Background */
-.modalreg {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(184, 247, 239, 0.821); /* Black w/ opacity */
-    padding-top: 60px;
-    }
-
-    /* Modal Box */
-    .modalreg-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #329685;
-    width: 30%; /* Varries based on the screen size */
-    }
-
-    /* Add a background color when the inputs get focus */
-    input[type=text]:focus, input[type=password]:focus {
-    background-color: rgba(184, 247, 239, 0.821);
-    outline: none;
-    }
-
- /* The Close Button (x) within the Modal on the right corner */
- .close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-    }
-
-/* Change the Close Button (x) to red once hovered over */
-.close:hover,
-.close:focus {
-color: red;
-cursor: pointer;
-}
-
-/* Cancel button additional styles */
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-    }    
-
-/*  Styles change for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-        display: block;
-        float: none;
-    }
-    .cancelbtn {
-        width: 100%;
-    }
-    }
-/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
 
 /*  *//*  *//*  *//*  *//* Courses & Cart *//*  *//*  *//*  *//*  *//*  */
 
@@ -305,7 +214,7 @@ cursor: pointer;
 }
 
 
-/* The cards with the courses sections within the video.html page */
+/* The cards with the courses sections within the coursevideo.html page */
 .box-video {
   height: 500px; 
   width: 600px; 
@@ -360,7 +269,7 @@ body {
   color: white;
 }
 
-/* Page content. The value of sthe margin-left property should match the value of the sidebar's width property */
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
   margin-left: 200px;
   padding: 1px 16px;
@@ -391,10 +300,10 @@ div.content {
 /*  *//*  *//*  *//*  *//* Video play *//*  *//*  *//*  *//*  *//*  */
 
 
-/* The Video Contaoner Characteristics */
+/* The Video Container Characteristics */
 
 bodyvideo {
-  /* to display the progress number in the middle */
+  /* Display the progress number in the middle */
   display: flex; align-items: center; justify-content: center; 
   flex-wrap: wrap;
 }
@@ -549,7 +458,7 @@ div.progress {
 
 /*  *//*  *//*  *//*  *//* Badges *//*  *//*  *//*  *//*  *//*  */
 
-/* ----------------------  Base  --------------------------- */
+/* *//*  *//*  *//*  *//* Base  *//*  *//*  *//*  *//* */
 
 
 svg {
@@ -557,7 +466,7 @@ svg {
   display: block;
 }
 
-/* ------------------ Keyframes Animation  --------------- */
+/* *//*  *//*  *//*  *//* Keyframes Animation  *//*  *//*  *//*  *//**/
 @keyframes grow {
   0% {
     transform: scale(0);
@@ -590,7 +499,7 @@ svg {
   }
 }
 
-/* ------------------  SVG Styles - Animation  ----------------- */
+/* *//*  *//*  *//*  *//* SVG Styles - Animation  *//*  *//*  *//*  *//* */
 
 .badge * {
   transform-origin: 50% 50%;
@@ -749,7 +658,7 @@ svg {
   background-color: rgba(102, 192, 180, 0.342);
 }
 
-/* Style the subnav menu content - positioned absolute */
+/* Style the subnav menu content */
 .subnav-content {
   display: none;
   position: absolute;
@@ -772,7 +681,7 @@ svg {
   margin: 5px;
   border-radius: 20%;
 }
-/* When you move the mouse over the subnav container, open the subnav content */
+/* When the mouse is over the subnav container, open the subnav content */
 .subnav:hover .subnav-content {
   display: block;
   position:relative;
