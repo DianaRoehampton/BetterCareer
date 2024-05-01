@@ -86,42 +86,5 @@
         </form>
       </div>
     </div>
-
-    <!------------------------------------------- JavaScript Code --------------------------------------->
-    <script>
-      // Import the functions necessary from the SDKs needed
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-      import {
-        getDatabase,
-        set,
-        ref,
-        update,
-      } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
-
-      import {
-        getAuth,
-        createUserWithEmailAndPassword,
-        signInWithEmailAndPassword,
-        onAuthStateChanged,
-        signOut,
-      } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
-
-      // The Better Career web app Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyCp-FYM-77QwCtFEYA5yQCUpHMSTl6oJWc",
-        authDomain: "bettercareer-27033.firebaseapp.com",
-        databaseURL: "https://bettercareer-27033-default-rtdb.firebaseio.com",
-        projectId: "bettercareer-27033",
-        storageBucket: "bettercareer-27033.appspot.com",
-        messagingSenderId: "898798821793",
-        appId: "1:898798821793:web:2d6b543a871403d3376be0",
-        measurementId: "G-3YBVGWX48B",
-      };
-
-      // Firebase Initialisation
-      const app = initializeApp(firebaseConfig);
-      const auth = firebase.auth();
-      const database = firebase.database();
-    </script>
   </body>
 </html>
