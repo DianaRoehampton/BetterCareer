@@ -164,7 +164,7 @@
                   type="button"
                   class="cancelbtn"
                   name="cancel"
-                  id="cancel"
+                  id="cancelReg"
                   value="Cancel"
                 />
               </div>
@@ -223,7 +223,7 @@
                   type="button"
                   class="cancelbtn"
                   name="cancel"
-                  id="cancel"
+                  id="cancelLog"
                   value="Cancel"
                 />
               </div>
@@ -373,8 +373,12 @@
       });
 
       //Using window.history.back() to redirect to the previous page when the cancel button is clicked 
-      document.getElementById('cancel').addEventListener('click', function() {
-        window.history.back(); // Redirect to the previous page
+      document.getElementById('cancelReg').addEventListener('click', function() {
+        window.history.back(); // Redirect to the previous page for cancelReg button
+    });
+
+    document.getElementById('cancelLog').addEventListener('click', function() {
+        window.history.back(); // Redirect to the previous page for cancelLog button
     });
     </script>
   </body>
