@@ -1,4 +1,4 @@
-/* 1. Structure */
+/*  *//*  *//*  *//* 1. Structure *//*  *//*  *//*  *//*  */
 
 html, body {
     width: 100%;
@@ -36,7 +36,7 @@ body:before {
     z-index: -1; /* Setting a lower z-index to ensure it stays behind other content */
 }
 
-/* 2. Elements */
+/*  *//*  *//*  *//* 2. Elements *//*  *//*  *//*  */
 
 .bgBlob {
     position: absolute;
@@ -52,7 +52,7 @@ body:before {
 }
 
 
-/* 3. Forms */
+/*  *//*  *//*  *//* 3. Forms *//*  *//*  *//*  */
 
 
 /* login & registration */
@@ -148,7 +148,7 @@ body:before {
     color: rgba(0, 0, 0, 0.4);
   }
 
-  /* Style for buttons */
+ /*  *//*  *//*  */ /* 4. Style for buttons *//*  *//*  *//*  */
 input[type="button"] {
   display: inline-block; /* Display buttons inline */
 }
