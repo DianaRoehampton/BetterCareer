@@ -435,7 +435,7 @@
     }
   }
 
-  
+  // Certificate of Completion Download Function
   function initiateFileDownload() {
     // My GitHub details: 'GITHUB_USERNAME' = DianaRoehampton, 'REPOSITORY_NAME' = BetterCareer, and 'FILE_PATH'=image/certExcel.png
     var githubRawUrl = 'https://raw.githubusercontent.com/DianaRoehampton/BetterCareer/main/image/certExcel.png';
@@ -450,6 +450,10 @@
     // Trigger the download
     a.click();
   }
+    //Log Out Alert Message Confirmation
+    document.getElementById('logout').addEventListener('click', function() {
+      alert("Thank you for visiting Better Career. We look forward seeing you soon!");
+    });
   </script>
 
 </body>
